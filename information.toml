@@ -1,0 +1,11 @@
+# this is a toml document
+# https://toml.io/en/
+
+[owner]
+name = "Karumanchi"
+book_link = "https://github.com/Paradorn-248/Computer-Programming/blob/master/Data%20Structure%20and%20Algorithmic%20Thinking%20with%20Python%20%20Data%20Structure%20and%20Algorithmic%20Puzzles%20(%20PDFDrive%20).pdf"
+
+[author]
+name = "nitesh kumar"
+org = "ABC"
+temp_targets = { cpu = 79.5, case = 72.0 }
