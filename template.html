@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Data Validation Report</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        h2 { color: #2c3e50; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>📊 Stock Data Validation Report</h1>
+
+    <h2>1. Basic Statistics</h2>
+    {{ stats_html | safe }}
+
+    <h2>2. Price/Volume Jumps (>5%)</h2>
+    {{ jumps_html | safe }}
+
+    <h2>3. Golden Source Comparison</h2>
+    <p><b>Max delta:</b> {{ delta_stats.max_delta_pct | round(4) }}<br>
+       <b>Mean delta:</b> {{ delta_stats.mean_delta_pct | round(4) }}<br>
+       <b>95th percentile:</b> {{ delta_stats["95th_percentile"] | round(4) }}<br>
+       <b>Records with >5% delta:</b> {{ delta_stats.num_deltas_gt_5pct }}</p>
+
+    <h3>⚠️ Detailed Deltas</h3>
+    {{ delta_rows_html | safe }}
+</body>
+</html>
