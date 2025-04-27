@@ -1,0 +1,30 @@
+[
+    {
+        "section_title": "Performance Highlights",
+        "exhibits": [
+            {
+                "title": "Sales Summary",
+                "type": "table",
+                "source": "sales_summary.csv",
+                "description": "This table summarizes quarterly sales performance across regions."
+            },
+            {
+                "title": "Revenue Trend",
+                "type": "plot",
+                "source": "revenue_plot.png",
+                "description": "Revenue growth trend over the last 5 years."
+            }
+        ]
+    },
+    {
+        "section_title": "Financial Summary",
+        "exhibits": [
+            {
+                "title": "Net Income Overview",
+                "type": "table",
+                "source": "net_income.csv",
+                "description": "Comparison of net income across fiscal years."
+            }
+        ]
+    }
+]
